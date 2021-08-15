@@ -1,32 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
+import { useForm } from '../../hooks/useForm'
 import { Message } from './Message'
 
 export const SimpleForm = () => {
 
-    const [state, setState] = useState({
+    const [inputs, inputChange] = useForm({
         email: '',
         password: ''
     });
-    const { email, password } = state;
-
-    const [login, setLogin] = useState(false);
-
-    const inputChange = ({ target }) => {
-        setState({
-            ...state,
-            [target.name]: target.value
-        })
-    }
-
-    useEffect(() => {
-        setLogin(email === 'favio');
-    }, [email])
-
+    const { email, password } = inputs;
 
     return (
         <Container>
@@ -40,9 +26,14 @@ export const SimpleForm = () => {
                             <Form.Control type="email" placeholder="Email" name="email"
                                 value={email} onChange={inputChange} />
                         </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Password" name="password"
+                                value={password} onChange={inputChange} />
+                        </Form.Group>
                     </Form>
                     <br />
-                    {login && <Message />}
+                    {email == 'Favio' && <Message />}
 
 
 
