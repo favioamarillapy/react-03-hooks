@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Col, Row, Button } from "react-bootstrap";
 
-import { useCounter } from '../useCounter'
+import { useCounter } from './useCounter'
 
 export const CounterCustomHook = () => {
 
