@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { CounterApp } from './components/use-state/CounterApp';
+import { CounterCustomHook } from './components/use-state/CounterCustomHook';
 
 ReactDOM.render(
-    <CounterApp />,
+    <CounterCustomHook />,
     document.getElementById('root')
 );
