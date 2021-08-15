@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { CounterApp } from './components/use-state/CounterApp';
 
 ReactDOM.render(
-    <App />,
+    <CounterApp />,
     document.getElementById('root')
 );
