@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { FetchCustomHook } from './components/use-fetch/FetchCustomHook';
+
 import './index.css';
-import { SimpleForm } from './components/use-effect/SimpleForm';
+
 
 ReactDOM.render(
-    <SimpleForm />,
+    <FetchCustomHook />,
     document.getElementById('root')
 );
